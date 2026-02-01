@@ -1,4 +1,3 @@
-# src/convert_excel_to_csv.py
 import pandas as pd
 import os
 
@@ -6,7 +5,7 @@ def convert_excel_to_csv():
     """Convert Excel files to CSV format as required"""
     
     # 1. Convert main dataset (both sheets)
-    excel_path = 'data/raw/ethiopia_fi_unified_data.xlsx'
+    excel_path =r'C:\Users\admin\Ethiopia-fi-forecast\data\raw\ethiopia_fi_unified_data.xlsx'
     
     # Read both sheets
     data_sheet = pd.read_excel(excel_path, sheet_name='ethiopia_fi_unified_data')
@@ -16,17 +15,17 @@ def convert_excel_to_csv():
     combined_data = pd.concat([data_sheet, impact_sheet], ignore_index=True)
     
     # Save to CSV
-    combined_data.to_csv('data/raw/ethiopia_fi_unified_data.csv', index=False)
+    combined_data.to_csv(r'C:\Users\admin\Ethiopia-fi-forecast\data\raw\ethiopia_fi_unified_data.csv', index=False)
     print(f"✅ Saved combined dataset with {len(combined_data)} records to CSV")
     
     # 2. Convert reference codes
-    ref_excel_path = 'data/raw/reference_codes.xlsx'
+    ref_excel_path =r'C:\Users\admin\Ethiopia-fi-forecast\data\raw\reference_codes.xlsx'
     ref_data = pd.read_excel(ref_excel_path, sheet_name='reference_codes')
-    ref_data.to_csv('data/raw/reference_codes.csv', index=False)
+    ref_data.to_csv(r'C:\Users\admin\Ethiopia-fi-forecast\data\raw\reference_codes.csv', index=False)
     print(f"✅ Saved reference codes with {len(ref_data)} records to CSV")
     
     # 3. Save guide as CSV for reference (optional)
-    guide_excel_path = 'data/raw/Additional Data Points Guide.xlsx'
+    guide_excel_path =r'C:\Users\admin\Ethiopia-fi-forecast\data\raw\Additional Data Points Guide.xlsx'
     guide_sheets = ['A. Alternative Baselines', 'B. Direct Corrln', 
                    'C. Indirect Corrln', 'D. Market Naunces']
     
