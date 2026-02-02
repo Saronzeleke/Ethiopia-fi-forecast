@@ -27,7 +27,11 @@ class DataLoader:
         """
         try:
             # Load main dataset
-            data = pd.read_csv(data_path, parse_dates=['observation_date', 'event_date'])
+            data = pd.read_csv(
+    data_path,
+    parse_dates=['observation_date', 'period_start', 'period_end']
+)
+
             
             # Load reference codes
             ref_codes = pd.read_csv(ref_codes_path)
