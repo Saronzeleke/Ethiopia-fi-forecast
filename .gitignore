@@ -7,6 +7,9 @@ __pycache__/
 *.so
 #data source
 data/
+#data sources 
+data/raw/
+data/processed/
 # Distribution / packaging
 .Python
 build/
