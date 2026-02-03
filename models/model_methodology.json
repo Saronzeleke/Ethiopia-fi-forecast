@@ -1,0 +1,20 @@
+{
+    "approach": "Event-Impact Association Matrix with Time-Dependent Functions",
+    "key_assumptions": [
+        "Event impacts follow predetermined functional forms (policy, launch, infrastructure)",
+        "Impacts have linear ramp-up periods",
+        "Effects combine additively",
+        "Historical validation informs magnitude adjustments"
+    ],
+    "uncertainties": [
+        "Limited pre/post data for many events",
+        "Interaction effects between events not modeled",
+        "External economic factors not included",
+        "Ethiopia-specific adoption rates may differ from global benchmarks"
+    ],
+    "validation_results": {
+        "telebirr_rmse": 3.3587572106361003,
+        "telebirr_mae": 2.3749999999999996,
+        "coverage": "0 events impacting 0 indicators"
+    }
+}
